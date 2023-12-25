@@ -1,3 +1,4 @@
+//1. 문자 찾기
 public class countChar{
 
     public int solution(String str, char c){

@@ -1,6 +1,5 @@
-import java.util.Scanner;
-
-public class Main {
+//7.회문 문자열 판독
+public class Palindrome {
 
     public String solution(String str){
         str = str.toUpperCase();
@@ -17,10 +16,4 @@ public class Main {
         return "YES";
     }
 
-    public static void main(String[] args) {
-        Main T = new Main();
-        Scanner sc = new Scanner(System.in);
-        String x = sc.next();
-        System.out.println(T.solution(x));
-    }
 }
