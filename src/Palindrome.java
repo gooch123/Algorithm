@@ -2,18 +2,22 @@
 public class Palindrome {
 
     public String solution(String str){
-        str = str.toUpperCase();
-        char[] charArray = str.toCharArray();
-        int head=0,rear= charArray.length-1;
-        while (head<rear){
-            if(charArray[head] == charArray[rear]){
-                head++;
-                rear--;
-            }else{
-                return "NO";
-            }
-        }
-        return "YES";
+//        str = str.toUpperCase();
+//        char[] charArray = str.toCharArray();
+//        int head=0,rear= charArray.length-1;
+//        while (head<rear){
+//            if(charArray[head] == charArray[rear]){
+//                head++;
+//                rear--;
+//            }else{
+//                return "NO";
+//            }
+//        }
+        String tmp = new StringBuilder(str).reverse().toString();
+        if(str.equalsIgnoreCase(tmp))
+            return "YES";
+        else
+            return "NO";
     }
 
 }

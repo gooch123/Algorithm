@@ -4,7 +4,7 @@ public class Distinct_Alphabet {
 
     public String solution(String str){
         String answer = "";
-//Stream으로 풀기
+        //Stream으로 풀기
 //        answer = str.chars()
 //                .distinct()
 //                .mapToObj(c -> String.valueOf((char) c))

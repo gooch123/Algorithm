@@ -1,6 +1,6 @@
-import java.util.Scanner;
+//11.문자열 압축
 
-public class Main {
+public class Continuous_char {
 
     public void solution(String str){
         String result = "";
@@ -20,10 +20,4 @@ public class Main {
         System.out.println(result);
     }
 
-    public static void main(String[] args) {
-        Main T = new Main();
-        Scanner sc = new Scanner(System.in);
-        String x = sc.next();
-        T.solution(x);
-    }
 }
