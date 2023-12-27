@@ -1,6 +1,5 @@
-import java.util.Scanner;
-
-public class Main {
+//2-3.가위바위보
+public class Rock_Scissors_Paper {
 
     public void solution(int num,int[][] arr){
 
@@ -24,17 +23,4 @@ public class Main {
 
     }
 
-    public static void main(String[] args) {
-        Main T = new Main();
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        int arr[][] = new int[2][num];
-        for (int k=0;k<2;k++){
-            for (int i=0;i<num;i++){
-                arr[k][i] = sc.nextInt();
-            }
-        }
-
-        T.solution(num,arr);
-    }
 }
