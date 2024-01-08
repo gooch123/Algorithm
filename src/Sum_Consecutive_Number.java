@@ -1,6 +1,5 @@
-import java.util.*;
-
-public class Main {
+//3-5.연속된 자연수의 합
+public class Sum_Consecutive_Number {
 
     public void solution(int n){
         int count = 0;
@@ -18,10 +17,4 @@ public class Main {
         System.out.println(count);
     }
 
-    public static void main(String[] args) {
-        Main T = new Main();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        T.solution(n);
-    }
 }
