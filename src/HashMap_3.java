@@ -1,7 +1,8 @@
-import java.util.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Main {
+//4-3.매출액의 종류
+public class HashMap_3 {
 
     public void solution(int n,int k,int[] list){
         ArrayList<Integer> answer = new ArrayList<>();
@@ -23,15 +24,4 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-        Main T = new Main();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        int[] list = new int[n];
-        for (int i =0;i<n;i++){
-            list[i] = sc.nextInt();
-        }
-        T.solution(n,k,list);
-    }
 }
