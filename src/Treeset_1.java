@@ -1,7 +1,8 @@
-import java.util.*;
-import java.util.HashMap;
+import java.util.Collections;
+import java.util.TreeSet;
 
-public class Main {
+//4-5.k번째 큰 수
+public class Treeset_1 {
 
     public void solution(int n,int k,int[] arr){
         TreeSet<Integer> treeSet = new TreeSet<>(Collections.reverseOrder());
@@ -23,15 +24,4 @@ public class Main {
         System.out.println("-1");
     }
 
-    public static void main(String[] args) {
-        Main main = new Main();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i =0 ;i<n; i++){
-            arr[i] = sc.nextInt();
-        }
-        main.solution(n,k,arr);
-    }
 }
