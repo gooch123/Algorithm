@@ -1,6 +1,7 @@
-import java.util.*;
+import java.util.Stack;
 
-public class Main {
+//5-5.쇠막대기
+public class Stack_5_Laser {
 
     public void solution(String str){
         int answer = 0;
@@ -19,10 +20,4 @@ public class Main {
         System.out.println(answer);
     }
 
-    public static void main(String[] args) {
-        Main main = new Main();
-        Scanner sc = new Scanner(System.in);
-        String str = sc.next();
-        main.solution(str);
-    }
 }
