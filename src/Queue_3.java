@@ -1,8 +1,17 @@
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
+class Person{
+    int id;
+    int priority;
 
+    public Person(int id, int priority) {
+        this.id = id;
+        this.priority = priority;
+    }
+}
 
-public class Main {
+public class Queue_3 {
 
     public void solution(int n, int m, int[] arr){
         Queue<Person> q = new LinkedList<>();
@@ -29,14 +38,4 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-        Main main = new Main();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i<n;i++)
-            arr[i] = sc.nextInt();
-        main.solution(n,m,arr);
-    }
 }
