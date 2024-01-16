@@ -1,6 +1,7 @@
-import java.util.*;
+import java.util.Arrays;
 
-public class Main {
+//6-10.마구간 정하기
+public class Decision_Algorithm_2 {
 
     public void solution(int n,int m, int[] arr){
         Arrays.sort(arr);
@@ -31,16 +32,4 @@ public class Main {
         return count;
     }
 
-
-    public static void main(String[] args) {
-        Main main = new Main();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i =0 ;i<n;i++){
-            arr[i] = sc.nextInt();
-        }
-        main.solution(n,m,arr);
-    }
 }
