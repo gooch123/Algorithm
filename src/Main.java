@@ -2,45 +2,36 @@ import java.util.*;
 
 public class Main {
 
-    public void solution(int n,int m, int[] arr){
-        Arrays.sort(arr);
-        int answer = 0;
-        int left = 1;
-        int right = Arrays.stream(arr).max().getAsInt();
-        while (left <= right){
-            int mid = (left+right)/2;
-            if (count(arr,mid) >= m){
-                answer = mid;
-                left = mid +1;
-            } else {
-                right = mid-1;
-            }
-        }
-        System.out.println(answer);
-    }
+    static int answer = 0;
+    static int[] dis = {1,-1,5};
+    static boolean[] check = new boolean[10001];
+    static Queue<Integer> queue = new LinkedList<>();
 
-    public int count(int[] arr, int distance){
-        int ep = 0;
-        int count = 1;
-        for (int i = 1;i<arr.length;i++){
-            if(arr[i] - arr[ep] >= distance){
-                count ++;
-                ep = i;
+    public void solution(int start, int dest){
+        queue.add(start);
+        check[start] = true;
+        while (!queue.isEmpty()){
+            for (int i = 0; i< queue.size(); i++){
+                int poll = queue.poll();
+                if (poll == dest)
+                    System.out.println(answer+1);
+                for (int di : dis) {
+                    int sum = poll + di;
+                    if(sum >= 1 && sum <= 10000 && !check[sum]) {
+                        queue.add(sum);
+                        check[sum] = true;
+                    }
+                }
             }
+            answer++;
         }
-        return count;
     }
-
 
     public static void main(String[] args) {
         Main main = new Main();
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i =0 ;i<n;i++){
-            arr[i] = sc.nextInt();
-        }
-        main.solution(n,m,arr);
+        int start = sc.nextInt();
+        int des = sc.nextInt();
+        main.solution(start,des);
     }
 }
