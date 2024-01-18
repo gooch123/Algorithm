@@ -2,36 +2,30 @@ import java.util.*;
 
 public class Main {
 
-    static int answer = 0;
-    static int[] dis = {1,-1,5};
-    static boolean[] check = new boolean[10001];
-    static Queue<Integer> queue = new LinkedList<>();
+    static ArrayList<Integer>[] arr_list;
 
-    public void solution(int start, int dest){
-        queue.add(start);
-        check[start] = true;
-        while (!queue.isEmpty()){
-            for (int i = 0; i< queue.size(); i++){
-                int poll = queue.poll();
-                if (poll == dest)
-                    System.out.println(answer+1);
-                for (int di : dis) {
-                    int sum = poll + di;
-                    if(sum >= 1 && sum <= 10000 && !check[sum]) {
-                        queue.add(sum);
-                        check[sum] = true;
-                    }
-                }
-            }
-            answer++;
-        }
+    public void solution(int start,boolean[] visit){
+
     }
 
     public static void main(String[] args) {
         Main main = new Main();
         Scanner sc = new Scanner(System.in);
-        int start = sc.nextInt();
-        int des = sc.nextInt();
-        main.solution(start,des);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        arr_list = new ArrayList[n+1];
+        for (ArrayList<Integer> list : arr_list) {
+            list = new ArrayList<>();
+        }
+        int[][] arr = new int[m][2];
+        for (int i =0 ; i<m; i++){
+            for (int j = 0;j<2; j++)
+                arr[i][j] = sc.nextInt();
+        }
+        for (int i = 0; i<m ; i++){
+            for (int j=0;j<2;j++)
+                arr_list[arr[i][0]].add(arr[i][1]);
+        }
+        main.solution(1, new boolean[n+1]);
     }
 }
