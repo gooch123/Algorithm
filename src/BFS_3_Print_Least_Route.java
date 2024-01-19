@@ -1,6 +1,10 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class Main {
+//7-12.그래프 최단거리(BFS)
+public class BFS_3_Print_Least_Route {
 
     static Queue<Integer> queue = new LinkedList<>();
     static ArrayList<ArrayList<Integer>> graph;
@@ -29,23 +33,20 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-        Main main = new Main();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        dest = new int[n+1];
-        Arrays.fill(dest,Integer.MAX_VALUE);
-        graph = new ArrayList<>();
-        check = new boolean[n+1];
-        for (int i = 0; i<=n; i++){
-            graph.add(new ArrayList<>());
-        }
-        for (int i = 0 ;i<m;i++){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            graph.get(a).add(b);
-        }
-        main.solution(1);
-    }
+//    int n = sc.nextInt();
+//    int m = sc.nextInt();
+//    dest = new int[n+1];
+//        Arrays.fill(dest,Integer.MAX_VALUE);
+//    graph = new ArrayList<>();
+//    check = new boolean[n+1];
+//        for (int i = 0; i<=n; i++){
+//        graph.add(new ArrayList<>());
+//    }
+//        for (int i = 0 ;i<m;i++){
+//        int a = sc.nextInt();
+//        int b = sc.nextInt();
+//        graph.get(a).add(b);
+//    }
+//        main.solution(1);
+
 }
