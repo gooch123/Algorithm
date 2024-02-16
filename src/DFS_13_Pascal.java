@@ -1,6 +1,5 @@
-import java.util.*;
-
-public class Main {
+//8-8.수열 추측하기
+public class DFS_13_Pascal {
 
     static int n;
     static int[] arr,perm;
@@ -34,17 +33,14 @@ public class Main {
         return result;
     }
 
-    public static void main(String[] args) {
-        Main main = new Main();
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        r = sc.nextInt();
-        arr = new int[n];
-        perm = new int[n];
-        ch = new boolean[n+1];
-        for (int i = 0; i < n; i++) {
-            arr[i] = factorial(n-1)/(factorial(n-1-i)*factorial(i));
-        }
-        main.solution(0,0);
-    }
+//    n = sc.nextInt();
+//    r = sc.nextInt();
+//    arr = new int[n];
+//    perm = new int[n];
+//    ch = new boolean[n+1];
+//        for (int i = 0; i < n; i++) {
+//        arr[i] = factorial(n-1)/(factorial(n-1-i)*factorial(i));
+//    }
+//        main.solution(0,0);
+
 }
