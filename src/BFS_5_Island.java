@@ -1,6 +1,7 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class Main {
+//8-13. 섬나라 아일랜드
+public class BFS_5_Island {
 
     static int n;
     static int answer = 0;
@@ -32,19 +33,20 @@ public class Main {
 
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        int[][] board = new int[n][n];
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        n = sc.nextInt();
+//        int[][] board = new int[n][n];
+//
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j < n; j++) {
+//                board[i][j] = sc.nextInt();
+//            }
+//        }
+//
+//        Main T = new Main();
+//        T.solution(board);
+//        System.out.println(answer);
+//    }
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                board[i][j] = sc.nextInt();
-            }
-        }
-
-        Main T = new Main();
-        T.solution(board);
-        System.out.println(answer);
-    }
 }

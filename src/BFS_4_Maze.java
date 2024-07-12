@@ -9,15 +9,15 @@ public class BFS_4_Maze {
     static boolean[][] ch;
 
     public void solution() {
-        Queue<Main.Point> queue = new LinkedList<>();
-        queue.add(new Main.Point(1,1));
+        Queue<Point> queue = new LinkedList<>();
+        queue.add(new Point(1,1));
         int count = 0;
         int[] dx = {1,0,-1,0};
         int[] dy = {0,1,0,-1};
         while (!queue.isEmpty()) {
             int len = queue.size();
             for (int i = 0; i < len; i++) {
-                Main.Point poll = queue.poll();
+                Point poll = queue.poll();
                 int px = poll.x;
                 int py = poll.y;
                 ch[px][py] = true;
@@ -28,7 +28,7 @@ public class BFS_4_Maze {
                 }
                 for (int j = 0; j < 4; j++) {
                     if(!ch[px+dx[j]][py+dy[j]])
-                        queue.add(new Main.Point(px + dx[j], py + dy[j]));
+                        queue.add(new Point(px + dx[j], py + dy[j]));
                 }
             }
             count ++;
